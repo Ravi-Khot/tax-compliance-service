@@ -1,0 +1,43 @@
+
+erDiagram
+    TRANSACTIONS {
+        Long id PK
+        String transactionId UK
+        LocalDate date
+        String customerId
+        BigDecimal amount
+        BigDecimal taxRate
+        BigDecimal reportedTax
+        String transactionType
+        String validationStatus
+        String complianceStatus
+        BigDecimal expectedTax
+        BigDecimal taxGap
+        String rawTransaction
+        String failureReasons
+        String originalTransactionId
+        LocalDateTime createdAt
+    }
+
+    TAX_RULES {
+        Long id PK
+        String ruleName UK
+        boolean enabled
+        String configJson
+    }
+
+    TAX_EXCEPTIONS {
+        Long id PK
+        String transactionId
+        String customerId
+        String ruleName
+        String severity
+        String message
+        LocalDateTime timestamp
+    }
+
+    AUDIT_LOGS {
+        String eventType
+        String transactionId
+        String detailJson
+    }
