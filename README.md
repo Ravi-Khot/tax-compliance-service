@@ -67,27 +67,13 @@ Do not commit database credentials or other secrets to Git.
 
 Clone the repository:
 
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-```
+git clone https://github.com/Ravi-Khot/tax-compliance-service.git
 
-Navigate to the project directory:
-
-```bash
 cd tax-compliance-service
-```
 
-Build the application:
-
-```bash
 mvn clean install
-```
 
-Run the application:
-
-```bash
 mvn spring-boot:run
-```
 
 The default Spring Boot port is 8080 unless changed in the application configuration.
 
